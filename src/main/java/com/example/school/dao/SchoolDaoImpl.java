@@ -40,6 +40,15 @@ public class SchoolDaoImpl implements SchoolDAO {
         return school;
     }
 
+    @Override
+    @Transactional
+    public List<School> findAllForTeacher() {
+        Session currentSession = entityManager.unwrap(Session.class);
+        Query<School> myQuery = currentSession.createQuery("SELECT id, date, first_name, last_name, type, ssn, email from School");
+        List<School> school = myQuery.getResultList();
+        return school;
+    }
+
 
     @Override
     @Transactional

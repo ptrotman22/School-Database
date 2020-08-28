@@ -32,6 +32,12 @@ public class SchoolController {
         return schoolDaoImpl.findAllForStudent();
     }
 
+    //http://localhost:8080/retrieveAllForTeacher
+    @GetMapping("/retrieveAllForTeacher")
+    public List<School> findAllForTeacher() {
+        return schoolDaoImpl.findAllForTeacher();
+    }
+
     //http://localhost:8080/school/1
     @GetMapping("/school/{SchoolID}")
     public School findSchoolByID(@PathVariable("SchoolID") int schoolID) {
@@ -73,7 +79,7 @@ public class SchoolController {
 
     //http://localhost:8080/addSchool
     @PostMapping("/addSchool")
-    public School addFlashcard(@RequestBody School theSchool) {
+    public School addSchool(@RequestBody School theSchool) {
         //also just in case they pass an id in JSON .... set id to o
         //this is to force a save of new item .... instead of update
         theSchool.setId(0);
@@ -84,7 +90,7 @@ public class SchoolController {
 
     //http://localhost:8080/updateSchool
     @PutMapping("/updateSchool")
-    public School updateFlashcard(@RequestBody School updateSchool) {
+    public School updateSchool(@RequestBody School updateSchool) {
         //No theFlashcard.setId(0); this will execute an update instead of a create
         schoolDaoImpl.save(updateSchool);
         return updateSchool;

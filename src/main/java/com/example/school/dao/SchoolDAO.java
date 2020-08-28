@@ -8,6 +8,7 @@ public interface SchoolDAO {
     //DAO Methods
     List<School> findAll();
     List<School> findAllForStudent();
+    List<School> findAllForTeacher();
     School findById(int theId);
     //School findPasswordByEmail(String email);
     //School findTypeByEmail(String email);
