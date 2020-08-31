@@ -133,12 +133,12 @@ class NewStudent extends Component {
                             <label>Last Name:</label>
                             <input className="form-control" type="text" placeholder="Last Name" value={this.state.lastName} onChange={this.handleChangeLastName}></input>
                         </div>
-                        <div>
+                        <div classname = "radio">
                             <label for="Student">Student</label>
-                            <input className="form-control" type="radio" id="Student" placeholder="Student" value={this.state.type} onChange={this.handleChangeType}></input>
+                            <input className="form-control" type="radio" id="Student" placeholder="Student" value={this.state.type === "Student"} onChange={this.handleChangeType}></input>
                             <br></br>
                             <label for="Teacher">Teacher</label>
-                            <input className="form-control" type="radio" id="Teacher" placeholder="Student" value={this.state.type} onChange={this.handleChangeType}></input>
+                            <input className="form-control" type="radio" id="Teacher" placeholder="Teacher" value={this.state.type === "Teacher"} onChange={this.handleChangeType}></input>
                             <br></br>
                         </div>
                         <div>

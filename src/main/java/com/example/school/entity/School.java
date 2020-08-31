@@ -90,6 +90,14 @@ public class School {
         this.type = type;
     }
 
+    public String getSSN() {
+        return ssn;
+    }
+
+    public void setSSN(String ssn) {
+        this.ssn = ssn;
+    }
+
     public String getEmail() {
         return email;
     }
