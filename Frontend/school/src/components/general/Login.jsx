@@ -36,7 +36,7 @@ class Login extends Component{
       {
         if(this.state.password !== this.state.passwordCheck) this.setState({error:"The email and/or password you have entered is not correct, please try again."})
         else {
-          this.props.history.push("/SchoolDataService")
+          this.props.history.push("/SchoolDatabase")
           //SchoolDataService.retrieveAdminByEmail(this.state.email).then(response =>{response.data === true ? this.props.history.push("/flashcard", {email: this.state.email}) : this.props.history.push("/employee/", {email: this.state.email})})
         }
       }

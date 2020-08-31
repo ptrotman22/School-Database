@@ -51,9 +51,6 @@ class SchoolDatabase extends Component {
       <div className="container">
         <nav className="Navbar">
             <img src="public/school.jpg" alt="School University"></img>
-            <button block name="school" onClick={() =>this.props.history.push("/")} >
-              Study flashcards
-            </button>
             <button className="btn btn-warning" onClick={() =>this.props.history.push("/")}>Logout</button>
         </nav>
 
