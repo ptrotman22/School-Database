@@ -36,16 +36,7 @@ class Login extends Component{
       {
         if(this.state.password !== this.state.passwordCheck) this.setState({error:"The email and/or password you have entered is not correct, please try again."})
         else {
-          // SchoolDataService.findTypeByEmail(this.state.email).then(
-          //   response => {this.setState.type}
-          // ).then(()
-          // if(this.state.type == "teacher"){
-          //   this.props.history.push("/flashcard")
-          // }
-          // else{
-          //   this.props.history.push("/flashcard")
-          // }
-          this.props.history.push("/SchoolDatabase")
+          this.props.history.push("/SchoolDataService")
           //SchoolDataService.retrieveAdminByEmail(this.state.email).then(response =>{response.data === true ? this.props.history.push("/flashcard", {email: this.state.email}) : this.props.history.push("/employee/", {email: this.state.email})})
         }
       }
@@ -88,7 +79,7 @@ class Login extends Component{
             <Button block disabled={this.state.isValid} type="submit">
               Login
             </Button>
-            <Button block name="registration" onClick={() =>this.props.history.push("/register/")} >
+            <Button block name="registration" onClick={() =>this.props.history.push("/NewStudent/")} >
               Register
             </Button>
           </form>

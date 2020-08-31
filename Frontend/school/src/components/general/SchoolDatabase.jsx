@@ -35,11 +35,11 @@ class SchoolDatabase extends Component {
 
   updateSchoolClicked(id) {
     console.log('Update Student or Teacher Clicked')
-    this.props.history.push(`/updateflashcard/${id}`)
+    this.props.history.push(`/updateSchool/${id}`)
 }
 
-  addFlashcardClicked() {
-    this.props.history.push("/newSchool/",{user: this.state.user})
+  addSchoolClicked() {
+    this.props.history.push("/NewStudent/",{user: this.state.user})
   }
 
   checkUser(email) {
@@ -50,8 +50,8 @@ class SchoolDatabase extends Component {
     return(
       <div className="container">
         <nav className="Navbar">
-            <img src="public/flashcards.png" alt="Flashcard Inc"></img>
-            <button block name="flashcard" onClick={() =>this.props.history.push("/flashcard")} >
+            <img src="public/school.jpg" alt="School University"></img>
+            <button block name="school" onClick={() =>this.props.history.push("/")} >
               Study flashcards
             </button>
             <button className="btn btn-warning" onClick={() =>this.props.history.push("/")}>Logout</button>
@@ -94,7 +94,7 @@ class SchoolDatabase extends Component {
             </div>
             <div style={{float: "right", width:"50%"}}>
               <button className="btn btn-warning" onClick={() =>this.props.history.push("/")}>Logout</button>
-              <button className="btn btn-warning" name="back" onClick={() =>this.props.history.push("/flashcard/")}>Back</button>
+              <button className="btn btn-warning" name="back" onClick={() =>this.props.history.push("/")}>Back</button>
             </div>
           </div>
         </div>

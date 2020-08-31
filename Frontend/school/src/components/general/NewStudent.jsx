@@ -98,7 +98,7 @@ class NewStudent extends Component {
       email: this.state.email ,
       password: this.state.password
     }
-    SchoolDataService.addSchool(school).then(this.props.history.push(`/schooldatabase`))
+    SchoolDataService.addSchool(school).then(this.props.history.push(`/`))
   }
 
   validateForm() {
@@ -134,11 +134,12 @@ class NewStudent extends Component {
                             <input className="form-control" type="text" placeholder="Last Name" value={this.state.lastName} onChange={this.handleChangeLastName}></input>
                         </div>
                         <div>
-                            <label>Type:</label>
+                            <label for="Student">Student</label>
                             <input className="form-control" type="radio" id="Student" placeholder="Student" value={this.state.type} onChange={this.handleChangeType}></input>
-                            <label for="Student">Student</label><br></br>
+                            <br></br>
+                            <label for="Teacher">Teacher</label>
                             <input className="form-control" type="radio" id="Teacher" placeholder="Student" value={this.state.type} onChange={this.handleChangeType}></input>
-                            <label for="Teacher">Teacher</label><br></br>
+                            <br></br>
                         </div>
                         <div>
                             <label>SSN:</label>
@@ -154,7 +155,7 @@ class NewStudent extends Component {
                         </div>
                         <br/><br/>
                       <button className="btn btn-success" type="submit" disabled={this.state.isValid}>Submit</button>&ensp;
-                      <button className="btn btn-warning" name="back" onClick={() =>this.props.history.push("/schooldatabase/")}>Back</button><br/><br/>
+                      <button className="btn btn-warning" name="back" onClick={() =>this.props.history.push("/")}>Back</button><br/><br/>
                     </form>
                 </div>
             </div>
